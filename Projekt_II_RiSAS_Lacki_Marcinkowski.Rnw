@@ -1,180 +1,41 @@
+% !TEX TS-program = Sweave-pdflatex
 \documentclass[twoside, 12pt, a4paper]{article}
 
-
+\usepackage{mystyle}
 \usepackage[noae]{Sweave}
-\usepackage{graphicx,verbatim}
-\usepackage{textcomp}
-\usepackage{times}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{amsthm}
-%\usepackage[OT4]{polski}
-\usepackage[cp1250]{inputenc} 
-\usepackage[T1]{fontenc}
-\usepackage{xcolor}
-\usepackage{subfigure}
-\usepackage{enumitem}
-%\usepackage[polish]{babel}
-\usepackage[centering, left=3.5cm, right=2.5cm, textheight=24cm]{geometry}
-\usepackage{indentfirst}
-
-\setlength{\textwidth}{6.5in} 
-\setlength{\textheight}{9in}
-\setlength{\oddsidemargin}{0in} 
-\setlength{\evensidemargin}{0in}
-\setlength{\topmargin}{-1.5cm}
-
-\usepackage{listings}
-\lstset{language=R,%
-   numbers=left,%
-   tabsize=3,%
-   numberstyle=\footnotesize,%
-   basicstyle=\ttfamily \footnotesize \color{black},%
-   escapeinside={(*@}{@*)}}
-
-\usepackage{hyperref}
-\hypersetup{colorlinks=true,
-            linkcolor=black,
-            citecolor=darkgray,
-            urlcolor=darkgray,
-            pagecolor=darkgray}
-\usepackage{longtable}
-
-% tweaks by MichaÄ¹â€š Ramsza (changing citations)
-\makeatletter
-\renewcommand\@biblabel[1]{}
-\def\@cite#1#2{{#1\if@tempswa:#2\fi}}
-%\def\@cite#1#2{\unskip\textsuperscript{#1\if@tempswa, #2\fi}} 
-\makeatother
 
 
-% --- wlasne komend y--------------------------------------------------
-\DeclareMathOperator*{\argmax}{\mathrm{argmax}}
-\DeclareMathOperator*{\qa}{\forall}
-\DeclareMathOperator*{\qe}{\exists}
-\newcommand{\setR}{\mathbb{R}}
-\newcommand{\setN}{\mathbb{N}}
-\newcommand{\trans}[1]{{#1}^{\mathrm{T}}}
-\newcommand{\e}{\mathrm{e}}
-\newcommand{\sgn}[1]{\mathrm{sgn}\left( #1 \right)}
-\newcommand{\T}[1]{T\left(#1\right)}
-\newcommand{\Det}[1]{\mathrm{det}\left( #1\right)}
-\newcommand{\Tr}[1]{\mathrm{tr}\left( #1\right)}
-\newcommand{\I}{\mathrm{I}}
-
-% --- komendy techniczne -----------------------------------------------
-\newcommand{\notka}[1]{\textcolor{black}{#1}}
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-% --- inne otoczenia ---------------------------------------------------
-\theoremstyle{definition}
-    \newtheorem{condition}{Assumption}
-    \newtheorem{example}{Example}      
-
-\theoremstyle{plain}
-    \newtheorem{definition}{Definition}    
-    \newtheorem{proposition}{Proposition}
-    \newtheorem{theorem}{Theorem}
-    \newtheorem{cor}{Corollary}
-
-\theoremstyle{remark}
-    \newtheorem{remark}{Remark}
-
-% --- inne ustawienia -------------------------------------------------
-%\linespread{1.2}
-\frenchspacing
-\sloppy
 
 \begin{document}
-\SweaveOpts{concordance=TRUE}
 
-\begin{titlepage}
+	\SweaveOpts{concordance=TRUE}
+	\SweaveOpts{echo=false}	
 
-\begin{center}
-\vspace*{2cm}
-\textsc{\LARGE R and SAS}\\[1.5cm]
 
-\textsc{\Large Project 2}\\[0.5cm]
+	% Here we prepare basic info
+<<results=hide>>=
 
- \HRule \\[0.4cm]
-{ \huge \bfseries Charts}\\[0.4cm]
- 
- \HRule \\[1.5cm]
+	rm(list=ls())
 
-\vspace*{0.5cm}
+	source("./scripts_R/setting_up_libraries.R")
 
-\begin{minipage}{0.4\textwidth}
-\begin{flushleft} \large
-\emph{Authors}:\\
-Mateusz \textsc{£¹cki} 291505\\
-Pawe³ \textsc{Marcinkowski} 290735\\
-
-\end{flushleft}
-\end{minipage}
-\begin{minipage}{0.4\textwidth}
-\begin{flushright} \large
-\emph{Supervisor:} \\
-mgr~Maciej \textsc{Sykulski}
-\end{flushright}
-
-\end{minipage}
-
- \vfill
- {\large Warszawa,  \today}
-
-\end{center} 
-\end{titlepage}
-
-\tableofcontents
-\section{Executive Summary}
-In this project there were revied packeges and functions to create charts in R. 
-\section{Data Set}
-<<echo=FALSE>>=
-library(xtable)
-library(lattice)
-library(mlmRev)
-
-con <- url("http://tofesi.mimuw.edu.pl/~cogito/smarterpoland/Diagnoza2011/diagnozaOsoby2011.RData")
-print(system.time({load(con)}))
-col.names  <- c("Age"
-                ,"Region"
-                ,"Income"
-                ,"Faculty"
-                ,"IsDisabled"
-                ,"SpeakEng"
-                ,"IsUnemp"
-                ,"UnempFreq"
-                ,"UnempDur")
-set <- data.frame(2011-diagnozaOsoby2011[,2071],
-                  diagnozaOsoby2011[,54],  
-                  diagnozaOsoby2011[,937],
-                  diagnozaOsoby2011[,1525],
-                  diagnozaOsoby2011[,1542],
-                  diagnozaOsoby2011[,1530],
-                  diagnozaOsoby2011[,2038],
-                  diagnozaOsoby2011[,1582],
-                  diagnozaOsoby2011[,2044])
-attr(set,"names") <- col.names
 
 @
 
-<<results=tex>>=
-liczba.braków <- function(x,set){
-   sum(ifelse(is.na(set[,x]),1,0))
- } 
-NA.NUM <- sapply(col.names,liczba.braków,set=set)
-xtable(as.data.frame(NA.NUM),digits=0,caption="Number of NA values in particular variables")
 
-@
+	% Here we generate the titlepage
+		\SweaveInput{tex_Rnw/titlepage.Rnw}
 
-<<results=tex,fig=TRUE>>=
-los2 <- sample(1:nrow(set),size=1000,replace=FALSE)
-library(mi)
-par(mar=c(4,8,4,4),mfrow=c(1,1))
-missing.pattern.plot(set[los2,], y.order=T, x.order=T, main="",
-                     obs.col = "orange", mis.col = "green")
-title(main = "Missing values pattern")
+	\tableofcontents
 
-@
+	\section{Executive Summary}
+		\SweaveInput{tex_Rnw/executive_summary.Rnw}
+
+
+	\section{Data Set}
+		\SweaveInput{tex_Rnw/data_summary.Rnw}
+
+
+
 
 \end{document}

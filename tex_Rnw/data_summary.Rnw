@@ -1,0 +1,21 @@
+<<results=tex>>=
+liczba.braków <- function(x,set){
+   sum(ifelse(is.na(set[,x]),1,0))
+ } 
+NA.NUM <- sapply(col.names,liczba.braków,set=set)
+xtable(as.data.frame(NA.NUM),digits=0,caption="Number of NA values in particular variables")
+@
+
+
+<<results=tex,fig=TRUE>>=
+los2 <- sample(1:nrow(set),size=1000,replace=FALSE)
+library(mi)
+par(mar=c(4,8,4,4),mfrow=c(1,1))
+missing.pattern.plot(set[los2,], y.order=T, x.order=T, main="",
+                     obs.col = "orange", mis.col = "green")
+title(main = "Missing values pattern")
+
+@
+
+
+	Here data will be presented. 
