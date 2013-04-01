@@ -2,7 +2,7 @@
 \documentclass[twoside, 12pt, a4paper]{article}
 
 \usepackage{mystyle}
-\usepackage[noae]{Sweave}
+\usepackage{Sweave}
 
 
 
@@ -15,13 +15,13 @@
 	% Here we prepare basic info
 <<results=hide>>=
 
-	rm(list=ls())
-
-
+	  rm(list=ls())
+    source("./scripts_R/setting_up_libraries.R")
+    
 @
 
-	%	source("./scripts_R/setting_up_libraries.R")
-	%	source("./scripts_R/preparing_data.R")
+		%source("./scripts_R/preparing_data.R")  
+
 
 	% Here we generate the titlepage
 		\SweaveInput{tex_Rnw/titlepage.Rnw}

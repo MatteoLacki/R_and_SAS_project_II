@@ -7,7 +7,7 @@
 		\textsc{\Large Project 2}\\[0.5cm]
 
 		 \HRule \\[0.4cm]
-		{ \huge \bfseries Charts}\\[0.4cm]
+		{ \huge \bfseries Unemployment in Southern Albania}\\[0.4cm]
 		 
 		 \HRule \\[1.5cm]
 
@@ -17,8 +17,8 @@
 			\begin{flushleft} 
 				\large
 				\emph{Authors}:\\
-				Mateusz \textsc{\L \c acki}  234189\\
-				Pawe\l \textsc{Marcinkowski} 290735\\
+				Mateusz \textsc{\L \c acki} \\
+				Pawe\l \textsc{Marcinkowski}\\
 			\end{flushleft}
 		\end{minipage}
 		\begin{minipage}{0.4\textwidth}
