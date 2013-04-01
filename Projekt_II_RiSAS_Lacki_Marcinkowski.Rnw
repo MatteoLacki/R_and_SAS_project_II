@@ -17,11 +17,11 @@
 
 	rm(list=ls())
 
-	source("./scripts_R/setting_up_libraries.R")
-
 
 @
 
+	%	source("./scripts_R/setting_up_libraries.R")
+	%	source("./scripts_R/preparing_data.R")
 
 	% Here we generate the titlepage
 		\SweaveInput{tex_Rnw/titlepage.Rnw}
@@ -29,11 +29,11 @@
 	\tableofcontents
 
 	\section{Executive Summary}
-		\SweaveInput{tex_Rnw/executive_summary.Rnw}
+		%\SweaveInput{tex_Rnw/executive_summary.Rnw}
 
 
 	\section{Data Set}
-		\SweaveInput{tex_Rnw/data_summary.Rnw}
+		%\SweaveInput{tex_Rnw/data_summary.Rnw}
 
 
 
