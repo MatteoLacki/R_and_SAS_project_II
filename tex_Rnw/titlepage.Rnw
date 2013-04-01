@@ -7,7 +7,7 @@
 		\textsc{\Large Project 2}\\[0.5cm]
 
 		 \HRule \\[0.4cm]
-		{ \huge \bfseries Unemployment in Southern Albania}\\[0.4cm]
+		{ \huge \bfseries Unemployment in Poland}\\[0.4cm]
 		 
 		 \HRule \\[1.5cm]
 
@@ -30,7 +30,7 @@
 		\end{minipage}
 
 		 \vfill
-		 {\large Warszawa,  \today}
+		 {\large Warsaw,  \today}
 
 	\end{center} 
 \end{titlepage}
