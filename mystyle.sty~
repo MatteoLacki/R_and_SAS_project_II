@@ -1,0 +1,130 @@
+\ProvidesPackage{mystyle}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Matt's Libraries %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[textwidth=18cm, textheight=24cm, centering]{geometry}
+
+	% AMS 
+\usepackage{amssymb} 
+\usepackage{amsmath} 
+\usepackage{amsthm}  
+\usepackage{amsfonts}
+
+
+	% Adding new colors.
+\usepackage{color}
+
+\definecolor{adriatico}{rgb}{.2,.40,.90}
+\definecolor{red}{rgb}{.8,.3,.1}
+\definecolor{green}{rgb}{.2,.8,.1}
+\definecolor{brownie}{rgb}{.174,.104,.43}
+
+
+	% In case something need to be included better than usually.
+%\usepackage{pdfpages}
+%\usepackage{newclude}
+
+	% Custom enumaration styles
+\usepackage{enumitem}
+
+\newlist{assumptions}{enumerate}{1}
+\setlist[assumptions,1]{label=\textcolor{green}{Assumption No. \arabic*}}
+
+%\newlist{task}{enumerate}{2}
+%\setlist[task,1]{label=\textcolor{adriatico}{Zad. \arabic{chapter}.\arabic*}}
+%\setlist[task,2]{label=\textcolor{adriatico}{(\alph*)}}
+
+
+%\numberwithin{equation}{section}
+%\numberwithin{figure}{section}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Paul's Libraries %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{textcomp}
+\usepackage{hyperref}
+
+\usepackage{graphicx,verbatim}
+\usepackage{textcomp}
+\usepackage{times}
+
+	% No need for polish. 
+%\usepackage[OT4]{polski}
+%\usepackage[cp1250]{inputenc} 
+%\usepackage[T1]{fontenc}
+%\usepackage[polish]{babel}
+\usepackage{xcolor}
+\usepackage{subfigure}
+
+
+	% Some geometry issues handled.
+\usepackage[centering, left=3.5cm, right=2.5cm, textheight=24cm]{geometry}
+\usepackage{indentfirst}
+
+\setlength{\textwidth}{6.5in} 
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{0in} 
+\setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{-1.5cm}
+
+	% Listings
+%\usepackage{listings}
+%\lstset{language=R,%
+%   numbers=left,%
+%   tabsize=3,%
+%   numberstyle=\footnotesize,%
+%   basicstyle=\ttfamily \footnotesize \color{black},%
+%   escapeinside={(*@}{@*)}}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+            linkcolor=black,
+            citecolor=darkgray,
+            urlcolor=darkgray,
+            pagecolor=darkgray}
+\usepackage{longtable}
+
+% tweaks by MichaÄ¹â Ramsza (changing citations)
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\def\@cite#1#2{{#1\if@tempswa:#2\fi}}
+%\def\@cite#1#2{\unskip\textsuperscript{#1\if@tempswa, #2\fi}} 
+\makeatother
+
+
+% --- wlasne komend y--------------------------------------------------
+\DeclareMathOperator*{\argmax}{\mathrm{argmax}}
+\DeclareMathOperator*{\qa}{\forall}
+\DeclareMathOperator*{\qe}{\exists}
+\newcommand{\setR}{\mathbb{R}}
+\newcommand{\setN}{\mathbb{N}}
+\newcommand{\trans}[1]{{#1}^{\mathrm{T}}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\sgn}[1]{\mathrm{sgn}\left( #1 \right)}
+\newcommand{\T}[1]{T\left(#1\right)}
+\newcommand{\Det}[1]{\mathrm{det}\left( #1\right)}
+\newcommand{\Tr}[1]{\mathrm{tr}\left( #1\right)}
+\newcommand{\I}{\mathrm{I}}
+
+% --- komendy techniczne -----------------------------------------------
+\newcommand{\notka}[1]{\textcolor{black}{#1}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+% --- inne otoczenia ---------------------------------------------------
+\theoremstyle{definition}
+    \newtheorem{condition}{Assumption}
+    \newtheorem{example}{Example}      
+
+\theoremstyle{plain}
+    \newtheorem{definition}{Definition}    
+    \newtheorem{proposition}{Proposition}
+    \newtheorem{theorem}{Theorem}
+    \newtheorem{cor}{Corollary}
+
+\theoremstyle{remark}
+    \newtheorem{remark}{Remark}
+
+% --- inne ustawienia -------------------------------------------------
+%\linespread{1.2}
+\frenchspacing
+\sloppy
+
