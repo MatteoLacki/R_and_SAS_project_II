@@ -1,0 +1,44 @@
+\ProvidesPackage{mystyle}
+
+%\usepackage[textwidth=18cm, textheight=24cm, centering]{geometry}
+
+
+\usepackage{amssymb} %Odpowiadają za narzędzia matematyczne
+\usepackage{amsmath} %Odpowiadają za narzędzia matematyczne
+\usepackage{amsthm}  %Odpowiadają za makra dla twierdzeń, itp
+
+
+
+\usepackage{enumitem}
+\usepackage{textcomp}
+\usepackage{hyperref}
+
+
+\usepackage{color}
+\definecolor{adriatico}{rgb}{.2,.40,.90}
+\definecolor{red}{rgb}{.8,.3,.1}
+\definecolor{green}{rgb}{.2,.8,.1}
+\definecolor{brownie}{rgb}{.174,.104,.43}
+
+
+%\newtheorem{mydef}{Definicja}[chapter]
+%\newtheorem{mytheo}{Twierdzenie}[chapter]
+%\newcommand{\real}{\mathbb{R}}	
+%\newcommand{\fracc}[2]{\Big( {#1 \over #2} \Big)}
+%\newcommand{\tip}{\fbox{\textcolor{red}{Wskazówka}}\,\,\,}
+%\newcommand{\dbar}[1]{\overline{\overline{ #1}}}	
+
+%\usepackage{graphicx}
+%\usepackage{pdfpages}
+%\usepackage{newclude}
+
+\newlist{assumptions}{enumerate}{1}
+\setlist[assumptions,1]{label=\textcolor{green}{Assumption No. \arabic*}}
+
+%\newlist{task}{enumerate}{2}
+%\setlist[task,1]{label=\textcolor{adriatico}{Zad. \arabic{chapter}.\arabic*}}
+%\setlist[task,2]{label=\textcolor{adriatico}{(\alph*)}}
+
+
+%\numberwithin{equation}{section}
+%\numberwithin{figure}{section}
