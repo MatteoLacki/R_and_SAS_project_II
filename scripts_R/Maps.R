@@ -1,8 +1,8 @@
-mapa<-readShapePoly("./data/POL_adm/POL_adm1.shp")
+mapa<-readShapePoly("./data/POL_adm1.shp")
 
 Data$Region <- factor(Data$Region, levels = sort(levels(Data$Region)))
 levels(Data$Region) <- sort(levels(mapa$VARNAME_1))
-dane$wojewodztwo <- factor(dane$wojewodztwo, levels = levels(mapa$VARNAME_1))
+Data$wojewodztwo <- factor(Data$Region, levels = levels(mapa$VARNAME_1))
 
 Poland_Heatmap <- function(variable,title,num_breaks,prec=0) {
 
