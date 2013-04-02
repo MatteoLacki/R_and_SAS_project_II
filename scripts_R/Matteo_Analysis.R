@@ -1,5 +1,4 @@
 	# Black-and-white histograms created for all possible variables
-lsls()
 
 Not_Filled_Histograms <- 
 	lapply(

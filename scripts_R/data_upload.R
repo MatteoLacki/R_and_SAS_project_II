@@ -1,9 +1,8 @@
 Data  <- read.csv2( file="./data/data.csv")
 Censored_Data <- read.csv2( file="./data/data_censored.csv")
   # We neglect the number of the pollee. 
-
 Data  <- Data[,-1]
-
+colnames(Data)
 names_of_variables  <- 
   c(
     "Age"
@@ -22,5 +21,7 @@ names_of_variables  <-
 
 no_of_variables <- length(names_of_variables)
 
-names_of_explanatory_variables <- setdiff( names_of_variables, c("Unemployment_Spells", "Unemployment_Frequency"))
-no_of_explanatory_variables <- no_of_variables - 1
+names_of_variables_without_Unemployment_Spells <- setdiff( names_of_variables, c("Unemployment_Spells", "Unemployment_Frequency"))
+names_of_variables_without_Unemployment_Frequency <- setdiff( names_of_variables, c("Unemployment_Spells", "Unemployment_Frequency"))
+names_of_variables_without_Unemployment_Spells_and_Frequency <- setdiff( names_of_variables, c("Unemployment_Spells", "Unemployment_Frequency"))
+
