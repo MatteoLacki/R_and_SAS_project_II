@@ -1,4 +1,4 @@
-  In order to verify whether the number of unemployment spells could be explained by other variables of interest a theoretical model was constructed. 
+  In order to verify whether the number of unemployment spells could be explained by other variables of interest a theoretical model was constructed.
 	
 	
   Given the discrete and ordered nature of the regressant, which in our case is the approximative number of unemployment spells, a natural approach to modelling would be to restrict one's attention to the count regression models. 

@@ -1,7 +1,7 @@
 Before removing all the censored values the data was
 
 
-<<results=tex,fig=TRUE>>=    
+<<results=tex>>=    
   liczba.braków <- function(x,set){
     sum(ifelse(is.na(set[,x]),1,0))
     } 

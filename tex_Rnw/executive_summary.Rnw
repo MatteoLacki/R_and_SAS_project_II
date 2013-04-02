@@ -1,2 +1,2 @@
-In this project there were revied packeges and functions to create charts in R. 
+In this project we have addressed the problem of unemployment in Poland.
 

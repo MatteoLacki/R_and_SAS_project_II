@@ -1,5 +1,5 @@
 In the present study we have carried out a detailed exploratory analysis of the phenomenon of being unemployed. In order to explain 
-the number of unemployment spells we have chosen <TO DO: HOW MANY?> explanatory variables that would seem reasonable to be a priori correlated with the regressant. Among these there were responses to questions on <TO DO>
+the number of unemployment spells we have chosen <TO DO: HOW MANY?> explanatory variables that would seem reasonable to be a priori correlated with the regressant. Among these there were responses to questions on <TO DO>.
 
 
 We have then built a Poisson regression model with the aim of convincing ourselves that the exploratory analysis conducted in the first section 
