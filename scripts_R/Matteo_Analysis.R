@@ -20,9 +20,6 @@ names_of_variables_without_Unemployment_Spells_and_Frequency <- setdiff( names_o
 
 colnames(Data)
 
-is.factor(Data$Age)
-W <- as.ordered(Data$Age)
-Data$Age <- W
 
 is.ordered(Data$Age)
 summary(Data)

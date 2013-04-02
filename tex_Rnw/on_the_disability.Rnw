@@ -1,0 +1,15 @@
+The Iron Duke-class was a group of four dreadnought battleships built for the British Royal Navy before the First World War. The class comprised four ships: Iron Duke, Marlborough, Benbow, and Emperor of India. Launched from October 1912 to November 1913, this was the third class of Royal Navy super-dreadnoughts. The ships were essentially repeats of the King George V class battleships; they retained the same ten 13.5 inch (34.3 cm) guns in five twin gun turrets on the centreline. However, the Iron Dukes had improved armour and a more powerful secondary armament of 6-inch weapons instead of the 4-inch mounted on the earlier ships.
+
+{ \setkeys{Gin}{width=.9\textwidth}
+  \begin{figure}[h]
+  \centering
+  
+<<fig=true, width=12, height=6>>=
+  GET_HISTOGRAM("Disability")
+@
+    \caption{Disability of the pollees -- summary.}
+    \label{Disability_hist}
+  \end{figure}
+}
+
+The Iron Duke-class was a group of four dreadnought battleships built for the British Royal Navy before the First World War. The class comprised four ships: Iron Duke, Marlborough, Benbow, and Emperor of India. Launched from October 1912 to November 1913, this was the third class of Royal Navy super-dreadnoughts. The ships were essentially repeats of the King George V class battleships; they retained the same ten 13.5 inch (34.3 cm) guns in five twin gun turrets on the centreline. However, the Iron Dukes had improved armour and a more powerful secondary armament of 6-inch weapons instead of the 4-inch mounted on the earlier ships.
