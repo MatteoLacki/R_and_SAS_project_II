@@ -1,0 +1,34 @@
+Before removing all the censored values the data was
+
+<<results=hide>>=
+  liczba.brakow <- function(x,set){
+    sum(ifelse(is.na(set[,x]),1,0))
+  } 
+NA.NUM <- sapply(names_of_variables, function(x) liczba.brakow(x, Censored_Data))
+@
+
+<<results=tex>>=    
+  xtable(as.data.frame(NA.NUM),digits=0,caption="Number of NA values in particular variables")
+@
+
+
+
+{ \setkeys{Gin}{width=.7\paperwidth}
+ \begin{figure}[h]
+ \centering
+ % Losujemy tysiąc wierszy i pokazujemy, jak wiele się mogło zmienić. 
+<<fig=true, width=12, height=6>>=
+  los2 <- sample(1:nrow(Censored_Data),size=1000,replace=FALSE)
+  oldpar <- par()
+  par(mar=c(4,8,4,4),mfrow=c(1,1))
+
+ missing.pattern.plot(Censored_Data[los2,], y.order=T, x.order=T, main="",
+                      obs.col = "orange", mis.col = "green")  
+    rm(los2)
+  par <- oldpar
+@
+ \caption{Missing values pattern.}
+ \end{figure}
+}
+
+For purposes of modelling we have decided to omit all the censored or not-assigned values. In the next project we shall also address the question of tackling the censored information. 
