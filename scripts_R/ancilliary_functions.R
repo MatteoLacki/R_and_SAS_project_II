@@ -104,20 +104,31 @@ HIST_LIST_UNWRAPPED <- function( Input_Data )
 	
 N	<- function(x)
 {
-	if (is.element( x, Names_of_Variables_Polish )) 
-	{ return( which( Names_of_Variables_Polish == x ) ) }
+	if (is.element( x, names_of_variables )) 
+	{ return( which( names_of_variables == x ) ) }
 	else 
 	
-	if (is.element( x, Names_of_Variables_English )) return( which( Names_of_Variables_English == x ) )
+	if (is.element( x, names_of_variables )) return( which( names_of_variables == x ) )
 	else return("error")
 }
-
-
+  # Testing.
+#N("Age")
+#N("Sex")
+#N("Region")
+#N("Income")
+#N("Education")
+#N("Is_Disabled")
+#N("Speaks_English")
+#N("Is_Unemployed")
+#N("Was_Unemployed")
+#N("Unemployment_Frequency")
+#N("Unemployment_Spells")
+  # test ok.
 
 #############################################################################################3
 
 
-GET_HISTOGRAM 	<- function(Binned_Variable, Filling_Variable)
+GET_FILLED_HISTOGRAM 	<- function(Binned_Variable, Filling_Variable)
 {
 	x <- N(Filling_Variable)
 	y <- N(Binned_Variable)
@@ -127,15 +138,47 @@ GET_HISTOGRAM 	<- function(Binned_Variable, Filling_Variable)
 }
 
 
+##### Here  we actually create filled histograms.
+
+
+
+Filled_Histograms  <- HIST_LIST_UNWRAPPED(Data)
+
+#############################################################################################3
+
+
+GET_HISTOGRAM   <- function(Binned_Variable)
+{
+    return( print(Not_Filled_Histograms[[N(Binned_Variable)]] ))
+}
+
+
+##### Here we actually creates histograms.
+
+
+Not_Filled_Histograms <- 
+  lapply(
+    names_of_variables, 
+    function(x)
+    { 
+      qplot( 
+        eval(parse(text = x)), 
+        data = Data, 
+        geom="histogram", 
+        ylab="No of people", 
+        xlab=gsub("_", " ", x)
+      ) + coord_flip()
+    }  
+  )
 
 #############################################################################################3
 	# The results of a model that are used by xtable are usually the 
-	# Model$coefficients part anyway. We take it, and change the names of rows
+	# Model$coefficients part anyway. We take these coefficients, and change the names of rows
 	# so that they look funky.
 	
 TRANSLATE_RESULTS <- function( Model_Coefficients )
 {
-	
+	  
 	rownames(Model_Coefficients) <-	
 		as.vector(
 			sapply( 
@@ -144,14 +187,15 @@ TRANSLATE_RESULTS <- function( Model_Coefficients )
 				{	
 						# Je??li zmienna nie jest opisana za pomoc?? factor.
 						# Czyli wyniki modelowania nie zwracaj?? factor values przy jej nazwie.
-					if ( is.element(Name_of_var_in_row_in_summary, Names_of_Variables_English) )
+					if ( is.element(Name_of_var_in_row_in_summary, names_of_variables ) )
 					return ( gsub("_", " ", Name_of_var_in_row_in_summary) )
 					else
 					{
-							# Okre??l kt??re wyra??enie wyst??puje jako nazwa zmiennej w wynikach.
-						Prefix 	<- 	Names_of_Variables_English[
+							# The results of regressions are usually in the form of NameofvariableValueofvariable.
+              # So we call Nameofvariable a prefix.
+						Prefix 	<- 	names_of_variables[
 								sapply( 
-									Names_of_Variables_English, 
+								  names_of_variables, 
 									function(y) grepl(y, Name_of_var_in_row_in_summary ) 
 								)]
 		
@@ -160,7 +204,7 @@ TRANSLATE_RESULTS <- function( Model_Coefficients )
 						return(
 							paste( 
 								gsub("_", " ", Prefix) ,
-								DICTIONARY_POLISH_ENGLISH(sub( Prefix,"", Name_of_var_in_row_in_summary )), 
+								sub( Prefix,"", Name_of_var_in_row_in_summary ), 
 								sep=" : "
 							)		
 						)

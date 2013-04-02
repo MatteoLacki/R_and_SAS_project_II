@@ -17,6 +17,7 @@
 	  rm(list=ls())
     source("./scripts_R/setting_up_libraries.R")
     source("./scripts_R/data_upload.R")  
+    source("./scripts_R/ancilliary_functions.R")
 @
       % This ain't needed since we have already downloaded the data.
     % source("./scripts_R/preparing_data.R")
@@ -33,15 +34,17 @@
     \newpage
 
 	\section{Data Set}
-		\SweaveInput{tex_Rnw/data_summary.Rnw}
-    \newpage
 
+    \subsection{Omissions}
+      \SweaveInput{tex_Rnw/on_the_omitted_data.Rnw}
+    
+    \subsection{Description of the selected database}
+      
+      \SweaveInput{tex_Rnw/data_summary.Rnw}
+    \newpage
+  
   \section{Modelling}
     \SweaveInput{tex_Rnw/poisson_modelling.Rnw}
     \newpage
     
-  \section{Conclusions}
-    \SweaveInput{tex_Rnw/conclusions.Rnw}
-
-
 \end{document}
