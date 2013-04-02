@@ -1,31 +1,43 @@
 Before removing all the censored values the data was
 
-
-<<results=tex>>=    
+<<results=hide>>=
   liczba.braków <- function(x,set){
     sum(ifelse(is.na(set[,x]),1,0))
     } 
   NA.NUM <- sapply(names_of_variables, function(x) liczba.braków(x, Censored_Data))
+  los2 <- sample(1:nrow(Censored_Data),size=1000,replace=FALSE)
+  oldpar <- par()
+  par(mar=c(4,8,4,4),mfrow=c(1,1))
+@
+
+<<results=tex>>=    
   
   xtable(as.data.frame(NA.NUM),digits=0,caption="Number of NA values in particular variables")
 @
 
 
      % W sumie to też nie jest potrzebne. Można zrobić zdjęcie przed wyrzuceniem!
-<<results=tex,fig=TRUE>>=
-los2 <- sample(1:nrow(Censored_Data),size=1000,replace=FALSE)
-oldpar <- par()
-par(mar=c(4,8,4,4),mfrow=c(1,1))
+     
+{ \setkeys{Gin}{width=.7\paperwidth}
+  \begin{figure}[h]
+  \centering
+  
+<<fig=true, width=12, height=6>>=
+  los2 <- sample(1:nrow(Censored_Data),size=1000,replace=FALSE)
+  oldpar <- par()
+  par(mar=c(4,8,4,4),mfrow=c(1,1))
+  missing.pattern.plot(Censored_Data[los2,], y.order=T, x.order=T, main="",
+                       obs.col = "orange", mis.col = "green")  
 
-missing.pattern.plot(Censored_Data[los2,], y.order=T, x.order=T, main="",
-                     obs.col = "orange", mis.col = "green")
-
-missing.pattern.plot(Censored_Data[los2,], y.order=T, x.order=T, main="",
-                     obs.col = "orange", mis.col = "green", title = "Missing values pattern")
-
-par <- oldpar
 @
+    \caption{Missing values pattern.}
+  \end{figure}
+}
 
+<<results=hide>>=
+  rm(los2)
+  par <- oldpar
+@
 
 	For purposes of modelling we have decided to omit all the censored or not-assigned values. In the next project we shall also address the question of tackling the censored information. 
   

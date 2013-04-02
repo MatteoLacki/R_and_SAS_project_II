@@ -30,14 +30,16 @@
   
 	\section{Executive Summary}
 		\SweaveInput{tex_Rnw/executive_summary.Rnw}
-
+    \newpage
 
 	\section{Data Set}
 		\SweaveInput{tex_Rnw/data_summary.Rnw}
+    \newpage
 
   \section{Modelling}
     \SweaveInput{tex_Rnw/poisson_modelling.Rnw}
-  
+    \newpage
+    
   \section{Conclusions}
     \SweaveInput{tex_Rnw/conclusions.Rnw}
 
