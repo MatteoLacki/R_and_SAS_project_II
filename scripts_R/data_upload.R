@@ -13,7 +13,6 @@ names_of_variables  <-
     ,"Is_Disabled"
     ,"Speaks_English"
     ,"Is_Unemployed"
-    ,"Was_Unemployed"
     ,"Unemployment_Frequency"
     ,"Unemployment_Spells"
   )
