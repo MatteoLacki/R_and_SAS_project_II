@@ -22,63 +22,6 @@ VP_LAYOUT <- function(x,y)
 #############################################################################################3
 
 
-
-
-
-DICTIONARY_POLISH_ENGLISH <- function(x)
-{
-  x <- sub("^Czy_Pali_Papierosy$", "Does_One_Smoke", x)
-  x <- sub("^nie$", "no", x)
-  x <- sub("^tak$", "yes", x)
-  x <- sub("^Plec$", "Gender",x)
-  x <- sub("^mezczyzna$", "man",x)
-  x <- sub("^kobieta$", "woman",x)
-	
-  x <- sub("^Zadowolenie_Z_Dzieci$", "Satisfaction_with_Children",x)	
-  x <- sub("^bardzo zadowolony$", "very satisfied",x)
-  x <- sub("^bardzo niezadowolony$", "very upset",x)
-  x <- sub("^dosyc zadowolony$", "quite satisfied",x)
-  x <- sub("^dosyc niezadowolony$", "quite upset",x)
-  x <- sub("^nie dotyczy$", "not concerned",x)
-  x <- sub("^niezadowolony$", "upset",x)
-  x <- sub("^zadowolony$", "satisfied",x)
-		
-	
-  x <- sub("^Ile_Pali_Dziennie$", "Cigarettes_Daily",x)
-	
-  x <- sub("^Dochod_Miesieczny$", "Monthly_Income",x)
-	
-  x <- sub("^Grupa_Zawodowa$", "Employment_Classification",x)
-  x <- sub("^bezrobotni$", "unemployed",x)
-  x <- sub("^emeryci$", "retiree",x)
-  x <- sub("^rencisci$", "pensioner",x)
-  x <- sub("^inni bierni zawodowo$", "other non-active",x)			
-  x <- sub("^pracownicy sekt. prywatnego$", "private sector worker",x)
-  x <- sub("^pracownicy sekt. publicznego$", "civil servant",x)	
-  x <- sub("^rolnicy$", "farmer",x)
-  x <- sub("^uczniowie i studenci$", "pupil or student",x)					
-  x <- sub("^prywatni przedsiebiorcy$", "entrepreneur",x)		
-	
-  x <- sub("^Czy_Tesciowie_Narzekaja$", "Do_Parents_in_law_Grumble",x)
-  x <- sub("^czesto$", "frequently",x)
-  x <- sub("^nigdy$", "never",x)
-  x <- sub("^zdarzylo sie$", "sometimes",x)
-	
-  x <- sub("^Poziom_Wyksztalcenia$", "Education",x)
-  x <- sub("^bez wyksztalcenia", "none",x)
-  x <- sub("^podstawowe ukonczone", "primary",x)
-  x <- sub("^policealne", "post secondary",x)
-  x <- sub("^srednie ogolnoksztalcace", "secondary",x)			
-  x <- sub("^srednie zawodowe", "secondary technical",x)
-  x <- sub("^wyzsze ze stopniem inzyniera, licencjata", "engineer or bachelor",x)
-  x <- sub("^wyzsze ze stopniem magistra lub rownorzednym", "master",x)
-  x <- sub("^wyzsze ze stopniem naukowym co najmniej doktora", "PhD",x)	
-  x <- sub("^zasadnicze zawodowe", "technical",x)		
-}
-
-#############################################################################################3
-
-
 FILLED_HISTOGRAMS_MAKER <- 
 	function(
 		Input_Data,				# data.frame 

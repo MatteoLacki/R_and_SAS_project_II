@@ -1,41 +1,14 @@
-	### Data Manipulation and Modelling
-	### Mateusz ????cki
-	
-Names_of_Variables_Polish	<- colnames(Dane)
-No_of_Variables			<- length( colnames(Dane) )
-
-
-	### Translating column names into English.
-
-Data 				<- Dane
-colnames(Data) 			<- DICTIONARY_POLISH_ENGLISH(colnames(Dane))
-Names_of_Variables_English 	<- colnames(Data)
-Data_for_Modelling		<- Data[,-1] 	### We get rid of the do-you-smoke question. 
-
-	# Resetting the factors
-	
-levels(Data$Education) <- c("bez wyksztalcenia","podstawowe ukonczone", "policealne", "srednie ogolnoksztalcace","srednie zawodowe","wyzsze ze stopniem inzyniera, licencjata","wyzsze ze stopniem magistra lub rownorzednym","wyzsze ze stopniem naukowym co najmniej doktora","zasadnicze zawodowe")
-
-	# Translation of tuples - it's not vectorised, but I lost about 5 hours trying to do it
-	
-for( i in 1:length(colnames(Data)))
-{
-	levels(Data[,i]) 	<- as.vector(sapply(levels(Data[,i]), DICTIONARY_POLISH_ENGLISH))
-}
-	
-rm(i)	
-
-
 	# Black-and-white histograms created for all possible variables
+lsls()
 
 Not_Filled_Histograms <- 
 	lapply(
-		Names_of_Variables_Polish, 
+		names_of_variables, 
 		function(x)
 		{ 
 			qplot( 
 				eval(parse(text = x)), 
-				data = Dane, 
+				data = Data, 
 				geom="histogram", 
 				ylab="No of people", 
 				xlab=gsub("_", " ", x)
@@ -43,8 +16,14 @@ Not_Filled_Histograms <-
 		}	
 	)
 
+Not_Filled_Histograms[[5]]
 
-	# Making all different histograms that are filled with third variable.
+ls()
+is.factor(Data$Education)
+
+
+
+# Making all different histograms that are filled with third variable.
 Filled_Histograms	<- HIST_LIST_UNWRAPPED(Data)
 
 

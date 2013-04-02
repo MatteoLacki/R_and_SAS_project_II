@@ -40,6 +40,8 @@ levels(set$Education) 	<- c(NA,"Above_PHD","Master","Bachelor",
                            "Vocational","Vocational","Secondary"
                            ,"Vocational","Lower","Lower","Lower","NA")
 levels(set$Is_Disabled) 	<- c(NA,"High","Medium","Low")
+
+  # Czy jest bezrobotny?
 levels(set$Is_Unemployed) 	<- c(NA,"Yes","No")
 
 rm( diagnozaOsoby2011 )
@@ -54,6 +56,7 @@ set$Unemployment_Frequency <- sapply(1:nrow(set),
                           if (is.na(set$Unemployment_Frequency[x]) && ifelse(is.na(set$Was_Unemployed[x]),0,set$Was_Unemployed[x])==2) 0 
                           else set$Unemployment_Frequency[x]  })
 
+  # Jak długo przebywa obecnie na bezrobociu, podane w liczbie miesiący. Przypusz
 set$Unemployment_Spells <- sapply(1:nrow(set),
                        function(x) { 
                          if (is.na(set$Unemployment_Spells[x]) && ifelse(is.na(set$Is_Unemployed[x]),"NA",as.character(set$Is_Unemployed[x]))=="No") 0 
@@ -64,3 +67,5 @@ summary(set)
 write.csv2( set , file="./data/data.csv", col.names = TRUE, row.names = TRUE)
 
 rm("set","names_of_variables")
+
+summary(Data)

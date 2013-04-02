@@ -22,7 +22,5 @@ names_of_variables  <-
 
 no_of_variables <- length(names_of_variables)
 
-names_of_explanatory_variables <- setdiff( names_of_variables, "Unemployment_Spells")
+names_of_explanatory_variables <- setdiff( names_of_variables, c("Unemployment_Spells", "Unemployment_Frequency"))
 no_of_explanatory_variables <- no_of_variables - 1
-
-
