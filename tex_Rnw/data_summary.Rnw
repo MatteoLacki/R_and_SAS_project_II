@@ -1,4 +1,4 @@
-  Having omited all the pollees about whom we didn't know something, we have obtained a data frame consisting of <TO DO> observations. Here we give a account on the observed spells of unemployment.
+  Having omited all the pollees about whom we didn't know something, we have obtained a data frame consisting of \Sexpr{nrow(Data)} observations. Here we give a account on the observed spells of unemployment.
   
     % This does not look pro. <TO DO: make it PRO.> 
 { \setkeys{Gin}{width=.7\paperwidth}

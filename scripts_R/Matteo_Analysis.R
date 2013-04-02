@@ -6,7 +6,7 @@ source("./scripts_R/ancilliary_functions.R")
 Data  <- read.csv2( file="./data/data.csv")
 Data  <- Data[,-1]
 
-
+nrow(Data)
 Data$Age <- as.ordered(Data$Age)
 Data$Income <- as.ordered(Data$Income) 
 
