@@ -39,8 +39,15 @@
       \SweaveInput{tex_Rnw/on_the_omitted_data.Rnw}
     
     \subsection{Description of the selected database}
-      
-      \SweaveInput{tex_Rnw/data_summary.Rnw}
+
+      \SweaveInput{tex_Rnw/on_the_age_data.Rnw}
+      \SweaveInput{tex_Rnw/on_the_sex_data.Rnw}
+      \SweaveInput{tex_Rnw/on_the_region_data.Rnw}
+      \SweaveInput{tex_Rnw/on_the_income_data.Rnw}
+      \SweaveInput{tex_Rnw/on_the_education_data.Rnw}
+      \SweaveInput{tex_Rnw/on_the_disability.Rnw}
+      \SweaveInput{tex_Rnw/on_the_grasp_of_english.Rnw}
+
     \newpage
   
   \section{Modelling}
