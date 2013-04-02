@@ -24,9 +24,13 @@ is.factor(Data$Education)
 
 # Making all different histograms that are filled with third variable.
 Filled_Histograms	<- HIST_LIST_UNWRAPPED(Data)
+ls()
+Filled_Histograms[[2]][[2]]
+Filled_Histograms[[2]][[4]]
 
+GET_HISTOGRAM("Sex", "Region")
 
-Poisson_Model 		<- glm( Cigarettes_Daily ~ ., data=Data_for_Modelling, family=poisson)
+Poisson_Model 		<- glm( Data$ ~ ., data=Data_for_Modelling, family=poisson)
 Poisson_Big_Summary 	<- summary( Poisson_Model )
 Poisson_Summary		<- TRANSLATE_RESULTS( Poisson_Big_Summary$coefficients )
 

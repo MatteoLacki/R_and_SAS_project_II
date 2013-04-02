@@ -104,15 +104,26 @@ HIST_LIST_UNWRAPPED <- function( Input_Data )
 	
 N	<- function(x)
 {
-	if (is.element( x, Names_of_Variables_Polish )) 
-	{ return( which( Names_of_Variables_Polish == x ) ) }
+	if (is.element( x, names_of_variables )) 
+	{ return( which( names_of_variables == x ) ) }
 	else 
 	
-	if (is.element( x, Names_of_Variables_English )) return( which( Names_of_Variables_English == x ) )
+	if (is.element( x, names_of_variables )) return( which( names_of_variables == x ) )
 	else return("error")
 }
-
-
+  # Testing.
+#N("Age")
+#N("Sex")
+#N("Region")
+#N("Income")
+#N("Education")
+#N("Is_Disabled")
+#N("Speaks_English")
+#N("Is_Unemployed")
+#N("Was_Unemployed")
+#N("Unemployment_Frequency")
+#N("Unemployment_Spells")
+  # test ok.
 
 #############################################################################################3
 
@@ -125,7 +136,6 @@ GET_HISTOGRAM 	<- function(Binned_Variable, Filling_Variable)
 	else
 	return( Filled_Histograms[[x]][[y]] )
 }
-
 
 
 #############################################################################################3
