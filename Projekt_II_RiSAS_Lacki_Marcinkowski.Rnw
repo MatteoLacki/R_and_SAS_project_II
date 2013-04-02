@@ -42,8 +42,7 @@
       
       \SweaveInput{tex_Rnw/data_summary.Rnw}
     \newpage
-    
-
+  
   \section{Modelling}
     \SweaveInput{tex_Rnw/poisson_modelling.Rnw}
     \newpage
