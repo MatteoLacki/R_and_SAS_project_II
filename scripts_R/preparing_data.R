@@ -59,7 +59,7 @@ set$Unemployment_Spells <- sapply(1:nrow(set),
                          if (is.na(set$Unemployment_Spells[x]) && ifelse(is.na(set$Is_Unemployed[x]),"NA",as.character(set$Is_Unemployed[x]))=="No") 0 
                          else set$Unemployment_Spells[x] })
 
-set <- na.omit(set[,c(1,2,3,4,5,6,7,8,9,11)])
+set <- na.omit(set[,c(1,2,3,4,5,6,7,8,10,11)])
 summary(set)
 write.csv2( set , file="./data/data.csv", col.names = TRUE, row.names = TRUE)
 
