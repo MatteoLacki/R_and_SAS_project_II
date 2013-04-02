@@ -17,10 +17,10 @@
 
 	  rm(list=ls())
     source("./scripts_R/setting_up_libraries.R")
-    
+    source("./scripts_R/data_upload.R")  
 @
-
-		%source("./scripts_R/preparing_data.R")  
+    % source("./scripts_R/preparing_data.R")
+		
 
 
 	% Here we generate the titlepage
