@@ -5,7 +5,6 @@
 \usepackage{Sweave}
 
 
-
 \begin{document}
 
 	\SweaveOpts{concordance=TRUE}
@@ -13,29 +12,34 @@
 
 
 	% Here we prepare basic info
+  
 <<results=hide>>=
-
 	  rm(list=ls())
     source("./scripts_R/setting_up_libraries.R")
     source("./scripts_R/data_upload.R")  
 @
+      % This ain't needed if we already downloaded the data.
     % source("./scripts_R/preparing_data.R")
 		
 
-
 	% Here we generate the titlepage
 		\SweaveInput{tex_Rnw/titlepage.Rnw}
-
+  
 	\tableofcontents
-
+  \newpage
+  
 	\section{Executive Summary}
-		%\SweaveInput{tex_Rnw/executive_summary.Rnw}
+		\SweaveInput{tex_Rnw/executive_summary.Rnw}
 
 
 	\section{Data Set}
-		%\SweaveInput{tex_Rnw/data_summary.Rnw}
+		\SweaveInput{tex_Rnw/data_summary.Rnw}
 
-
+  \section{Modelling}
+    \SweaveInput{tex_Rnw/poisson_modelling.Rnw}
+  
+  \section{Conclusions}
+    \SweaveInput{tex_Rnw/conclusions.Rnw}
 
 
 \end{document}

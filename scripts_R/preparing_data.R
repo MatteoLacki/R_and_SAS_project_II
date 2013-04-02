@@ -38,4 +38,4 @@ levels(set$Education) 	<- c(NA,"AboveDoc","Master","Bachel",
                            "Vacational","Vacational","Sxecondary"
                            ,"Vacational","Lower","Lower","Lower","NA")
 
-write.csv2( set , file="./data/data.csv")
+write.csv2( set , file="./data/data.csv", col.names = TRUE, rown.names = FALSE)

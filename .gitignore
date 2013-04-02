@@ -20,7 +20,8 @@
 ###########
 *.pdf
 *.csv
-
+*.Rdata
+*.RData
 
 # Packages #
 ############

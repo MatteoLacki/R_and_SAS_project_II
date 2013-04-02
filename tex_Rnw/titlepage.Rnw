@@ -17,8 +17,8 @@
 			\begin{flushleft} 
 				\large
 				\emph{Authors}:\\
-				Mateusz \textsc{\L \c acki} \\
-				Pawe\l \textsc{Marcinkowski}\\
+				Mateusz\,\,\textsc{\L \c acki} \\
+				Pawe\l\,\,\textsc{Marcinkowski}\\
 			\end{flushleft}
 		\end{minipage}
 		\begin{minipage}{0.4\textwidth}
