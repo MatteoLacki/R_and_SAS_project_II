@@ -40,12 +40,19 @@
     
     \subsection{Description of the selected database}
 
-      \SweaveInput{tex_Rnw/on_the_age_data.Rnw}
-      \SweaveInput{tex_Rnw/on_the_sex_data.Rnw}
-      \SweaveInput{tex_Rnw/on_the_region_data.Rnw}
-      \SweaveInput{tex_Rnw/on_the_income_data.Rnw}
-      \SweaveInput{tex_Rnw/on_the_education_data.Rnw}
-      \SweaveInput{tex_Rnw/on_the_disability.Rnw}
+      \subsubsection{Age}
+        \SweaveInput{tex_Rnw/on_the_age_data.Rnw}
+      \subsubsection{Sex} 
+        \SweaveInput{tex_Rnw/on_the_sex_data.Rnw}
+      \subsubsection{Region} 
+        \SweaveInput{tex_Rnw/on_the_region_data.Rnw}
+      \subsubsection{Income} 
+        \SweaveInput{tex_Rnw/on_the_income_data.Rnw}
+      \subsubsection{Education} 
+        \SweaveInput{tex_Rnw/on_the_education_data.Rnw}
+      \subsubsection{Disability} 
+        \SweaveInput{tex_Rnw/on_the_disability.Rnw}
+      \subsubsection{Grasp of English} 
       \SweaveInput{tex_Rnw/on_the_grasp_of_english.Rnw}
 
     \newpage
