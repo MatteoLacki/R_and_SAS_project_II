@@ -1,20 +1,32 @@
-<<results=tex>>=
-liczba.braków <- function(x,set){
-   sum(ifelse(is.na(set[,x]),1,0))
- } 
-NA.NUM <- sapply(col.names,liczba.braków,set=set)
-xtable(as.data.frame(NA.NUM),digits=0,caption="Number of NA values in particular variables")
+Before removing all the censored values the data was
+
+
+<<results=tex,fig=TRUE>>=    
+  liczba.braków <- function(x,set){
+    sum(ifelse(is.na(set[,x]),1,0))
+    } 
+  NA.NUM <- sapply(names_of_variables, function(x) liczba.braków(x, Censored_Data))
+  
+  xtable(as.data.frame(NA.NUM),digits=0,caption="Number of NA values in particular variables")
 @
 
 
+     % W sumie to też nie jest potrzebne. Można zrobić zdjęcie przed wyrzuceniem!
 <<results=tex,fig=TRUE>>=
-los2 <- sample(1:nrow(set),size=1000,replace=FALSE)
+los2 <- sample(1:nrow(Censored_Data),size=1000,replace=FALSE)
+oldpar <- par()
 par(mar=c(4,8,4,4),mfrow=c(1,1))
-missing.pattern.plot(set[los2,], y.order=T, x.order=T, main="",
-                     obs.col = "orange", mis.col = "green")
-title(main = "Missing values pattern")
 
+missing.pattern.plot(Censored_Data[los2,], y.order=T, x.order=T, main="",
+                     obs.col = "orange", mis.col = "green")
+
+missing.pattern.plot(Censored_Data[los2,], y.order=T, x.order=T, main="",
+                     obs.col = "orange", mis.col = "green", title = "Missing values pattern")
+
+par <- oldpar
 @
 
 
-	Here data will be presented. 
+	For purposes of modelling we have decided to omit all the censored or not-assigned values. In the next project we shall also address the question of tackling the censored information. 
+  
+  Having omited all the pollees about whom we didn't know something, we have obtained a data frame consisting of <TO DO> observations. Here we give a brief account on them.
