@@ -1,0 +1,23 @@
+  In order to verify whether the number of unemployment spells could be explained by other variables of interest a theoretical model was constructed. 
+	
+	
+  Given the discrete and ordered nature of the regressant, which in our case is the approximative number of unemployment spells, a natural approach to modelling would be to restrict one's attention to the count regression models. 
+	
+  
+	In our study we have chosen to test whether the number of unemployment spells could be related to other variables of interest by a simple Poisson model. Therefore we make the following assumption
+	
+	\begin{assumptions}
+		\item the regressant given a vector of observations $\mathbf{x}_i$ has the Poisson law given by
+			
+		\begin{equation}\label{Rozklad}
+			 \mathbb{P} ( \text{Unemployment Spells} = y_i | \mathbf{x}_i ) =  \frac{e^{-\lambda_i} \lambda_i^{y_i }}{ y_i ! } 
+		\end{equation}		
+		
+		
+		\begin{equation}\label{Srednia}
+			\lambda_i = \mathbb{E} ( \text{Unemployment Spells } | \mathbf{x}_i ) =  \exp \Big( \mathbf{x}_i^{t} \beta  \Big)  
+		\end{equation}
+			
+	\end{assumptions}
+		
+	We notice that the regrassant depends on the explanatory variables linearly but through an exponential link function. This assures the non-negativeness of the paramater $\lambda_i$. The standard \url{glm} library allows us to estimate the $\beta$ coefficients vector through the likelihood maximisation procedures. The results of estimation procedures are enlisted in Table <TO DO>. 	
