@@ -1,4 +1,6 @@
-Before removing all the censored values the data was
+The project is based on the data, which was gathered during national survey \emph{Diagnoza Społeczna 2011}.  In this paper only the part of the survey referring to the individual questionnaire was used - the second part refers to households as a whole. The data was downloaded from the internet webpage \url{http://tofesi.mimuw.edu.pl/~cogito/smarterpoland/Diagnoza2011/}  .
+
+The main idea of the project is to concentrate on the unemployment in Poland from the perspective of region, age, sex, education, disability and income. In the Table \ref{Tab:MissingValues} were described variables, which were chosen to the further analysis.
 
 <<results=hide>>=
   liczba.brakow <- function(x,set){
@@ -8,10 +10,10 @@ NA.NUM <- sapply(names_of_variables, function(x) liczba.brakow(x, Censored_Data)
 @
 
 <<results=tex>>=    
-  xtable(as.data.frame(NA.NUM),digits=0,caption="Number of NA values in particular variables")
+  xtable(as.data.frame(NA.NUM),digits=0,caption="Number of NA values in particular variables",label <- "Tab:MissingValues")
 @
 
-
+More information about the structure of the missing values is given by the Figure \ref{fig:Missing_pattern}. Plot to visualize pattern of missingness in the sample of 1000 observation from the dataset. Green colour represents missing values. 
 
 { \setkeys{Gin}{width=.7\paperwidth}
  \begin{figure}[h]
@@ -20,14 +22,15 @@ NA.NUM <- sapply(names_of_variables, function(x) liczba.brakow(x, Censored_Data)
 <<fig=true, width=12, height=6>>=
   los2 <- sample(1:nrow(Censored_Data),size=1000,replace=FALSE)
   oldpar <- par()
-  par(mar=c(4,8,4,4),mfrow=c(1,1))
+  par(mar=c(4,11,4,4),mfrow=c(1,1))
 
- missing.pattern.plot(Censored_Data[los2,], y.order=T, x.order=T, main="",
-                      obs.col = "orange", mis.col = "green")  
+ missing.pattern.plot(Censored_Data[los2,-1], y.order=T, x.order=T, main="",
+                      obs.col = "blue", mis.col = "green")  
     rm(los2)
   par <- oldpar
 @
  \caption{Missing values pattern.}
+ \label{fig:Missing_pattern}
  \end{figure}
 }
 
