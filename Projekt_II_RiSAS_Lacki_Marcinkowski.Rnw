@@ -18,7 +18,7 @@
     source("./scripts_R/setting_up_libraries.R")
     source("./scripts_R/data_upload.R")  
 @
-      % This ain't needed if we already downloaded the data.
+      % This ain't needed since we have already downloaded the data.
     % source("./scripts_R/preparing_data.R")
 		
 
