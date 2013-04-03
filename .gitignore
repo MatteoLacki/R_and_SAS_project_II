@@ -29,6 +29,8 @@
 *.shp
 *.shx
 *.txt
+*.png
+*.aux
 
 # Packages #
 ############
