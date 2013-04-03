@@ -1,2 +1,2 @@
-In this project we have addressed the problem of unemployment in Poland.
+In this project we have addressed the problem of unemployment in Poland. We were also interested in grasping the diversification of this phenomenon with respect to another important variable, for which we have chosen people's education level. We have deemed it important because of the ongoing public discussion about mismatches on the labour market generated through overeducation. 
 

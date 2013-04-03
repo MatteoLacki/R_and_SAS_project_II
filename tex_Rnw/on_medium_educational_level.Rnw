@@ -1,0 +1,50 @@
+\subsubsection*{Education level - medium.} 
+
+The distribution details of the number of spells of unemployment among the pollees with itermediate education levels are gathered in Figure \ref{fig:spells_of_unemployment_Medium}. Notice that people with intermediate levels of education do form another vast chunk of our sample, amounting for \Sexpr{ 2903 + 295 + 57 + 8} out of \Sexpr{ nrow(Data) } people. The distribution of unemployment spells does not look significantly different from the one designed for the pollees with lower education : still, the vast amount of people did not loose their job. And if they lost it, it was mostly once.
+
+{ \setkeys{Gin}{width=.7\textwidth}
+ \begin{figure}[h]
+ \centering
+ 
+ \includegraphics{./data/Mediumpie1.png}
+ \caption{Distribution of the Spells on Unemployment conditioned by medium education level of the pollee.}
+ \label{fig:spells_of_unemployment_Medium}
+ \end{figure}
+}
+
+
+Again we pass to the study of the distribution of age in our sample. Observe that in Figure \ref{histogram_wieku_Medium}, in comparison to Figure \ref{histogram_wieku_low}, a higer number of pollees were among people aged less than $30$ years. Do notice that in this plot we can see a slightly more accentuated unemployment toll among the younger people. 
+
+{ \setkeys{Gin}{width=.7\textwidth}
+ \begin{figure}[h]
+ \centering
+ 
+ \includegraphics{./data/Mediumhist.png}
+ \caption{Age distribution in the sample conditioned by medium education level of the pollee with information on currently being unemployed interlayed.}
+ \label{histogram_wieku_Medium}
+ \end{figure}
+}
+
+What can be seen from Figure \ref{histogram_plci_Medium} is that there are more women that are unemployed in the gros meaning. On the other hand the percentages of unemployed people among men and women seem equal, indicating no clear classification pattern here. 
+{ \setkeys{Gin}{width=.7\textwidth}
+ \begin{figure}[h]
+ \centering
+ 
+ \includegraphics{./data/Mediumhist2.png}
+ \caption{Sex distribution in the sample conditioned by medium education level of the pollee with information on currently being unemployed interlayed.}
+ \label{histogram_plci_Medium}
+ \end{figure}
+}
+
+
+Finally, we observe that geographic distribution of pollees at intermediate educational levels do seem to change a bit in comparison to the already mentioned ones. As seen in Figure \ref{map_average_unemployment_Medium}, it is more frequent to meet a person with medium level of education and being unemployed in the Ma\l opolskie voievodship.
+
+{ \setkeys{Gin}{width=.7\textwidth}
+ \begin{figure}[h]
+ \centering
+ 
+ \includegraphics{./data/Mediumheatmap.png}
+ \caption{Geographic distribution of average number of unemployment of the pollees with medium educational level.}
+ \label{map_average_unemployment_Medium}
+ \end{figure}
+}

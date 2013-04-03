@@ -16,8 +16,26 @@
 <<results=hide>>=
 	  rm(list=ls())
     source("./scripts_R/setting_up_libraries.R")
+@
+
+<<results=hide>>=
     source("./scripts_R/data_upload.R")  
-    source("./scripts_R/ancilliary_functions.R")
+@
+
+<<results=hide>>=
+source("./scripts_R/ancilliary_functions.R")
+@
+
+<<results=hide>>=
+source("./scripts_R/Maps.R")
+@
+
+<<results=hide>>=    
+source("./scripts_R/Hist.R")
+@
+
+<<results=hide>>=    
+source("./scripts_R/visualization_scheme.R")
 @
       % This ain't needed since we have already downloaded the data.
     % source("./scripts_R/preparing_data.R")
@@ -40,26 +58,17 @@
     
     \subsection{Description of the selected database}
 
-      \subsubsection{Age}
+      \subsubsection{Without conditioning}
         \SweaveInput{tex_Rnw/on_the_age_data.Rnw}
-      \subsubsection{Sex} 
+      \subsubsection{Division by levels of education} 
         \SweaveInput{tex_Rnw/on_the_sex_data.Rnw}
-      \subsubsection{Region} 
-        \SweaveInput{tex_Rnw/on_the_region_data.Rnw}
-      \subsubsection{Income} 
-        \SweaveInput{tex_Rnw/on_the_income_data.Rnw}
-      \subsubsection{Education} 
-        \SweaveInput{tex_Rnw/on_the_education_data.Rnw}
-      \subsubsection{Disability} 
-        \SweaveInput{tex_Rnw/on_the_disability.Rnw}
-      \subsubsection{Grasp of English} 
-        %\SweaveInput{tex_Rnw/on_the_grasp_of_english.Rnw}
-
+        \SweaveInput{tex_Rnw/on_medium_educational_level.Rnw}
+        \SweaveInput{tex_Rnw/on_high_educational_level.Rnw}
     \newpage
     \newpage    
   
-  \section{Modelling}
-    \SweaveInput{tex_Rnw/poisson_modelling.Rnw}
-    \newpage
+  %\section{Modelling}
+    %\SweaveInput{tex_Rnw/poisson_modelling.Rnw}
+    %\newpage
     
 \end{document}
