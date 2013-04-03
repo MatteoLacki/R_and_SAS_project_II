@@ -51,7 +51,7 @@
       \subsubsection{Education} 
         \SweaveInput{tex_Rnw/on_the_education_data.Rnw}
       \subsubsection{Disability} 
-      %\SweaveInput{tex_Rnw/on_the_disability.Rnw}
+        \SweaveInput{tex_Rnw/on_the_disability.Rnw}
       \subsubsection{Grasp of English} 
         %\SweaveInput{tex_Rnw/on_the_grasp_of_english.Rnw}
 

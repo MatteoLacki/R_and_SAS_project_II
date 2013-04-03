@@ -1,6 +1,6 @@
 The Iron Duke-class was a group of four dreadnought battleships built for the British Royal Navy before the First World War. The class comprised four ships: Iron Duke, Marlborough, Benbow, and Emperor of India. Launched from October 1912 to November 1913, this was the third class of Royal Navy super-dreadnoughts. The ships were essentially repeats of the King George V class battleships; they retained the same ten 13.5 inch (34.3 cm) guns in five twin gun turrets on the centreline. However, the Iron Dukes had improved armour and a more powerful secondary armament of 6-inch weapons instead of the 4-inch mounted on the earlier ships.
 
-{ \setkeys{Gin}{width=.9\textwidth}
+{ \setkeys{Gin}{width=\textwidth}
   \begin{figure}[h]
   \centering
 <<fig=true, width=12, height=6>>=
@@ -11,4 +11,26 @@ GET_HISTOGRAM("Education")
   \end{figure}
 }
   
-The Iron Duke-class was a group of four dreadnought battleships built for the British Royal Navy before the First World War. The class comprised four ships: Iron Duke, Marlborough, Benbow, and Emperor of India. Launched from October 1912 to November 1913, this was the third class of Royal Navy super-dreadnoughts. The ships were essentially repeats of the King George V class battleships; they retained the same ten 13.5 inch (34.3 cm) guns in five twin gun turrets on the centreline. However, the Iron Dukes had improved armour and a more powerful secondary armament of 6-inch weapons instead of the 4-inch mounted on the earlier ships.
+As can be seen from the Figure \ref{Edu_hist}, the majority of our pollees have vocational education. It outnumbers even all the groups with higher education summed together. This might stem from our choice of getting rid off all the observations that didn't respond to the unemployment questions. We have thus included additional information about the unemployment in Figure \ref{Edu_hist_2}. 
+
+
+{ \setkeys{Gin}{width=\textwidth}
+  \begin{figure}[h]
+  \centering
+<<fig=true, width=12, height=6>>=
+qplot(  Data$Education, 
+	data=Data, 
+	geom="bar", 
+	fill=as.ordered(Data$Unemployment_Spells), 
+	position="stack",
+	ylab="No of people", 
+	xlab="Education") + coord_flip()+ scale_fill_discrete(name="Unemployment Spells")
+@
+    \caption{Education wiht the pollees with interlayed number of unemployment spells.}
+    \label{Edu_hist_2}
+  \end{figure}
+}
+  
+  We observe here the usual phenomenon concerning our data set - the overwhelming part of pollees are employed. One can also infere that people with lower education and with vocational education are more exposed to getting unemployed at all.
+  
+  

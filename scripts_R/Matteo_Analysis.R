@@ -1,7 +1,6 @@
 	# Black-and-white histograms created for all possible variables
 
 source("./scripts_R/setting_up_libraries.R")
-source("./scripts_R/ancilliary_functions.R")
 
 Data  <- read.csv2( file="./data/data.csv")
 Data  <- Data[,-1]
@@ -12,11 +11,14 @@ Data$Income <- as.ordered(Data$Income)
 
 names_of_variables  <- colnames(Data)
 no_of_variables <- length(names_of_variables)
+source("./scripts_R/ancilliary_functions.R")
+
 
 names_of_variables_without_Unemployment_Spells <- setdiff( names_of_variables, c("Unemployment_Spells", "Unemployment_Frequency"))
 names_of_variables_without_Unemployment_Frequency <- setdiff( names_of_variables, c("Unemployment_Spells", "Unemployment_Frequency"))
 names_of_variables_without_Unemployment_Spells_and_Frequency <- setdiff( names_of_variables, c("Unemployment_Spells", "Unemployment_Frequency"))
 
+qplot(Data$Education, data=Data, geom="bar", fill=Data$Unemployment_Spells, position="stack")
 
 colnames(Data)
 
@@ -25,11 +27,14 @@ is.ordered(Data$Age)
 summary(Data)
 
 GET_HISTOGRAM("Unemployment_Frequency")
-GET_HISTOGRAM("Unemployment_Spells")
 GET_HISTOGRAM("Education")
+GET_FILLED_HISTOGRAM("Unemployment_Spells", "Education") 
+GET_FILLED_HISTOGRAM("Unemployment_Frequency", "Education") 
+GET_FILLED_HISTOGRAM("Education", "Unemployment_Frequency") 
+
 GET_HISTOGRAM("Age")
 
-GET_FILLED_HISTOGRAM("Unemployment_Spells", "Sex") 
+
 GET_FILLED_HISTOGRAM("Unemployment_Spells", "Age") 
 GET_FILLED_HISTOGRAM("Unemployment_Spells", "Income") 
 
