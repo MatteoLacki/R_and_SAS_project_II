@@ -52,7 +52,7 @@ Again we pass to the study of the distribution of age in our sample. Observe tha
   \centering
   
 \includegraphics{./data/Lowerheatmap.png}
-    \caption{Geographic distribution of average number of unemployment.}
+    \caption{Geographic distribution of average number of unemployment of the pollees with lower degrees of education.}
     \label{map_average_unemployment_low}
   \end{figure}
 }

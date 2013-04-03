@@ -62,6 +62,8 @@ source("./scripts_R/visualization_scheme.R")
         \SweaveInput{tex_Rnw/on_the_age_data.Rnw}
       \subsubsection{Division by levels of education} 
         \SweaveInput{tex_Rnw/on_the_sex_data.Rnw}
+        \SweaveInput{tex_Rnw/on_medium_educational_level.Rnw}
+        \SweaveInput{tex_Rnw/on_high_educational_level.Rnw}
     \newpage
   
   %\section{Modelling}
