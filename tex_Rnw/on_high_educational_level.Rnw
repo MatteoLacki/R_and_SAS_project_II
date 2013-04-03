@@ -1,6 +1,6 @@
 \subsubsection*{Education level - high.} 
 
-The distribution details of the number of spells of unemployment among the pollees are gathered in Figure \ref{fig:spells_of_unemployment_low}. Notice that people with lower level of education do form the vast majority of sample, amount for \Sexpr{ 3664 + 358 + 90 + 17} out of \Sexpr{ nrow(Data) } people.
+The distribution details of the number of spells of unemployment among the pollees with higer education  are gathered in Figure \ref{fig:spells_of_unemployment_High}. Notice that this group is much smaller, amounting for only  \Sexpr{ 1800 + 98 + 24 + 2} out of \Sexpr{ nrow(Data) } people. Figure \ref{fig:spells_of_unemployment_High} shows no significant constrasts with all the other similar distributions when it comes to the ordering of the numbers. It seems however that it is more frequent in this group to stay employed for a longer spell of periods. 
 
 { \setkeys{Gin}{width=.7\textwidth}
  \begin{figure}[h]
@@ -13,7 +13,7 @@ The distribution details of the number of spells of unemployment among the polle
 }
 
 
-Again we pass to the study of the distribution of age in our sample. Observe that in Figure \ref{histogram_wieku_High}, in comparison to Figure \ref{histogram_wieku}, a lower number of pollees were among people aged less than $30$ years. This indicates the civilisational of our society jump from lower educational level to higher ones. Still, no clear pattern emerges as to when in their life people are more prone to get unempoyed. 
+Again we pass to the study of the distribution of age in our sample. Figure \ref{histogram_wieku_High} shows an interesting phenomenon: no only there is more highly educated people among the younger cohorts, but also a rather clear pattern emerges -- it seems that highly educated people are right now more prone to be laid off. This may stem from several reasons, among which we would enumerate the ongoing economic downturn and a typical educational mismatch between people with higher education and the labour market's needs and whims.
 
 { \setkeys{Gin}{width=.7\textwidth}
  \begin{figure}[h]
@@ -25,7 +25,8 @@ Again we pass to the study of the distribution of age in our sample. Observe tha
  \end{figure}
 }
 
-What can be seen from Figure \ref{histogram_plci_High} is that when it comes to low education, there are more men than women. This is completely absurd -- we, the men, we know who is better educated. 
+What can be seen from Figure \ref{histogram_plci_High} is that when it comes to higher education, there are more women than men both in numerosity and frequency. Women are probably investing more time in education than men do. Contrary to the glass-ceilling theory, none preponderance for educated men in the market can be traced at present.
+
 { \setkeys{Gin}{width=.7\textwidth}
  \begin{figure}[h]
  \centering
@@ -37,7 +38,7 @@ What can be seen from Figure \ref{histogram_plci_High} is that when it comes to 
 }
 
 
-Finally, we observe that geographic distribution of pollees at lower educational levels are not specially different from the ones in general, as can be seen by comparing Figures \ref{map_average_unemployment_High} and \ref{map_average_unemployment}.
+Finally, we observe that when it comes to geographic distribution of highly educated pollees, big urban zones seem to be less unemployment yielding than other, as can be seen in Figure \ref{map_average_unemployment_High}. Observe that in \L odzkie, Mazowieckie, and Ma\l opolskie there seems to be less unemployment than in previous cases. Results for Zachodniopomorskie and Podkarpackie come as a surprise, being regions with very small average unemployment duration.  
 
 { \setkeys{Gin}{width=.7\textwidth}
  \begin{figure}[h]

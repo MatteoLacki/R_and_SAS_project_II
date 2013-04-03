@@ -8,7 +8,7 @@ cond_visualization_scheme(Data,Data$Education,c("Never","x1","x2"))
 
 \subsubsection*{Education level - low.} 
 
-The distribution details of the number of spells of unemployment among the pollees are gathered in Figure \ref{fig:spells_of_unemployment_low}. Notice that people with lower level of education do form the vast majority of sample, amount for \Sexpr{ 3664 + 358 + 90 + 17} out of \Sexpr{ nrow(Data) } people.
+The distribution details of the number of spells of unemployment among the pollees with lower education are gathered in Figure \ref{fig:spells_of_unemployment_low}. Notice that people with lower level of education do form the vast majority of sample, amount for \Sexpr{ 3664 + 358 + 90 + 17} out of \Sexpr{ nrow(Data) } people.
 
 { \setkeys{Gin}{width=.7\textwidth}
   \begin{figure}[h]

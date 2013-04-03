@@ -1,6 +1,6 @@
 \subsubsection*{Education level - medium.} 
 
-The distribution details of the number of spells of unemployment among the pollees are gathered in Figure \ref{fig:spells_of_unemployment_Medium}. Notice that people with intermediate levels of education do form another vast chunk of our sample, amounting for \Sexpr{ 2903 + 295 + 57 + 8} out of \Sexpr{ nrow(Data) } people. The distribution of unemployment spells does not look significantly different from the one designed for the pollees with lower education : still, the vast amount of people did not loose their job. And if they lost it, it was mostly once.
+The distribution details of the number of spells of unemployment among the pollees with itermediate education levels are gathered in Figure \ref{fig:spells_of_unemployment_Medium}. Notice that people with intermediate levels of education do form another vast chunk of our sample, amounting for \Sexpr{ 2903 + 295 + 57 + 8} out of \Sexpr{ nrow(Data) } people. The distribution of unemployment spells does not look significantly different from the one designed for the pollees with lower education : still, the vast amount of people did not loose their job. And if they lost it, it was mostly once.
 
 { \setkeys{Gin}{width=.7\textwidth}
  \begin{figure}[h]
