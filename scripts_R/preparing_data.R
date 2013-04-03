@@ -36,9 +36,9 @@ attr(set,"names") 	<- names_of_variables
 
 levels(set$Sex) 	<- c(NA,"Male","Female")
 levels(set$Speaks_English) 	<- c(NA,"Actively","Passively","Not")
-levels(set$Education) 	<- c(NA,"Above_PHD","Master","Bachelor",
-                           "Vocational","Vocational","Secondary"
-                           ,"Vocational","Lower","Lower","Lower","NA")
+levels(set$Education) 	<- c(NA,"High","High","High",
+                           "Medium","Medium","Medium"
+                           ,"Lower","Lower","Lower","Lower","Lower")
 levels(set$Is_Disabled) 	<- c(NA,"High","Medium","Low")
 
   # Czy jest bezrobotny?
