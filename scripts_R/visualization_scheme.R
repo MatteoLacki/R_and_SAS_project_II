@@ -16,6 +16,9 @@ png(file=paste("./data/",pref,"hist.png",sep=""))
 print(Histogram_z_wypełnieniem(Set$Age, Set$Is_Unemployed, Set))
 dev.off()
 
+png(file=paste("./data/",pref,"hist2.png",sep=""))
+print(Histogram_z_wypełnieniem(Set$Sex, Set$Is_Unemployed, Set))
+dev.off()
 return (0)
   
 }
