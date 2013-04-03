@@ -1,0 +1,15 @@
+  Having omited all the pollees about whom we didn't know something, we have obtained a data frame consisting of \Sexpr{nrow(Data)} observations. In this paragraph we describe relations between spells of unemployment and age.
+First of all we decided to generate smoothed histogram of Age. We can observe that in our sample dominate people at working age, what provides that further analysis will make sense.    
+{ \setkeys{Gin}{width=.7\paperwidth}
+  \begin{figure}[h]
+  \centering
+  
+<<fig=true, width=12, height=6>>=
+  oldpar <- par()
+  plot(density(Data$Age,na.rm=TRUE),main="Density plot of Age")
+  par <-oldpar
+@
+    \caption{Age distribution in the sample.}
+    \label{fig:age_dist}
+  \end{figure}
+}
