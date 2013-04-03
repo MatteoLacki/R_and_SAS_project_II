@@ -22,7 +22,7 @@ visualsation_scheme(Data,"test_")
   \begin{figure}[h]
   \centering
   
-\includegraphics{./Data/test_pie1.png}
+\includegraphics{./data/test_pie1.png}
     \caption{Age distribution in the sample.}
     \label{fig:age_dist}
   \end{figure}
@@ -32,7 +32,7 @@ visualsation_scheme(Data,"test_")
   \begin{figure}[h]
   \centering
   
-\includegraphics{./Data/test_hist.png}
+\includegraphics{./data/test_hist.png}
     \caption{Age distribution in the sample.}
     \label{fig:age_dist}
   \end{figure}
@@ -42,7 +42,7 @@ visualsation_scheme(Data,"test_")
   \begin{figure}[h]
   \centering
   
-\includegraphics{./Data/test_hist2.png}
+\includegraphics{./data/test_hist2.png}
     \caption{Age distribution in the sample.}
     \label{fig:age_dist}
   \end{figure}
@@ -52,7 +52,7 @@ visualsation_scheme(Data,"test_")
   \begin{figure}[h]
   \centering
   
-\includegraphics{./Data/test_heatmap.png}
+\includegraphics{./data/test_heatmap.png}
     \caption{Age distribution in the sample.}
     \label{fig:age_dist}
   \end{figure}
