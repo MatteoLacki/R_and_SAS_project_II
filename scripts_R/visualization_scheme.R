@@ -23,15 +23,12 @@ dev.off()
 return (0)
 }
 
-z <- visualsation_scheme(Data,"test_")
+visualsation_scheme(Data,"test_")
+
 cond_visualization_scheme <- function(set,var){
-levels_var <- levels(var)
-sapply(1:length(levels_var),function(x)
-  {
-    sapply(1:length(var),function(y) {
-                                    ifelse(var)
-    }
-                                    )
-   
-   })  
+  levels_var <- levels(var)
+my_cut <-   function(x){ 
+    visualsation_scheme(set[(var==x) ,],x) }
+  vectors <- sapply(levels_var,my_cut)
 }
+cond_visualization_scheme(Data,Data$Education)
