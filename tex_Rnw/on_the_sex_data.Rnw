@@ -1,5 +1,58 @@
-<To WRITE>
+We now pass to additional conditioning our sample with respect to the levels of education. We decided to bin together formally different levels of education into one, three-levelled variable, reflecting the number of years spent in the educational system.  
 
 <<echo=FALSE,results=hide>>=
 cond_visualization_scheme(Data,Data$Education,c("Never","x1","x2"))
 @
+
+
+
+\subsubsection*{Education level - low.} 
+
+The distribution details of the number of spells of unemployment among the pollees are gathered in Figure \ref{fig:spells_of_unemployment_low}. Notice that people with lower level of education do form the vast majority of sample, amount for \Sexpr{ 3664 + 358 + 90 + 17} out of \Sexpr{ nrow(Data) } people.
+
+{ \setkeys{Gin}{width=.7\textwidth}
+  \begin{figure}[h]
+  \centering
+  
+\includegraphics{./data/Lowerpie1.png}
+    \caption{Distribution of the Spells on Unemployment conditioned by low education level of the pollee.}
+    \label{fig:spells_of_unemployment_low}
+  \end{figure}
+}
+
+
+Again we pass to the study of the distribution of age in our sample. Observe that in Figure \ref{histogram_wieku_low}, in comparison to Figure \ref{histogram_wieku}, a lower number of pollees were among people aged less than $30$ years. This indicates the civilisational of our society jump from lower educational level to higher ones. Still, no clear pattern emerges as to when in their life people are more prone to get unempoyed. 
+
+{ \setkeys{Gin}{width=.7\textwidth}
+  \begin{figure}[h]
+  \centering
+  
+\includegraphics{./data/Lowerhist.png}
+    \caption{Age distribution in the sample conditioned by low education level of the pollee with information on currently being unemployed interlayed.}
+    \label{histogram_wieku_low}
+  \end{figure}
+}
+
+  What can be seen from Figure \ref{histogram_plci_low} is that when it comes to low education, there are more men than women. This is completely absurd -- we, the men, we know who is better educated. 
+{ \setkeys{Gin}{width=.7\textwidth}
+  \begin{figure}[h]
+  \centering
+  
+\includegraphics{./data/Lowerhist2.png}
+    \caption{Sex distribution in the sample conditioned by low education level of the pollee with information on currently being unemployed interlayed.}
+    \label{histogram_plci_low}
+  \end{figure}
+}
+
+
+  Finally, we observe that geographic distribution of pollees at lower educational levels are not specially different from the ones in general, as can be seen by comparing Figures \ref{map_average_unemployment_low} and \ref{map_average_unemployment}.
+  
+{ \setkeys{Gin}{width=.7\textwidth}
+  \begin{figure}[h]
+  \centering
+  
+\includegraphics{./data/Lowerheatmap.png}
+    \caption{Geographic distribution of average number of unemployment.}
+    \label{map_average_unemployment_low}
+  \end{figure}
+}

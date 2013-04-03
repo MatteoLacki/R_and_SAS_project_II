@@ -24,7 +24,7 @@ visualsation_scheme(Data,"test_")
 
 
 
-So we pass to the main point of attention - the number of spells on unemployment. The distribution details of the number of spells of unemployment among the pollees is gathered in Figure \ref{fig:spells_of_unemployment}. 
+So we pass to the main point of attention - the number of spells on unemployment. The distribution details of the number of spells of unemployment among the pollees are gathered in Figure \ref{fig:spells_of_unemployment}. 
 
 { \setkeys{Gin}{width=.7\textwidth}
   \begin{figure}[h]
@@ -41,7 +41,7 @@ Notice that the overwhelming majority of the pollees did not end up enemployed i
 
 Next, we pass to the study of the distribution of age in our sample. Observe that in Figure \ref{histogram_wieku} we can observe that no clear pattern emerges when it comes to at what age we are more prone to get unempoyed. On the other hand, this figure rassebles only the information about being unemployed at the moment of conducting the polls.
 
-{ \setkeys{Gin}{width=.7\paperwidth}
+{ \setkeys{Gin}{width=.7\textwidth}
   \begin{figure}[h]
   \centering
   
@@ -51,22 +51,28 @@ Next, we pass to the study of the distribution of age in our sample. Observe tha
   \end{figure}
 }
 
-{ \setkeys{Gin}{width=.7\paperwidth}
+  We can also state rather surely, that our sample is well balanced when it comes to sex representation. Indeed, as can be seen from Figure
+\ref{histogram_plci}, the amount of men and women, or women and men, is approximately equal. We can also see that there seems to be a little more currently unemployed women than there are currently unemployed men.  
+  
+{ \setkeys{Gin}{width=.7\textwidth}
   \begin{figure}[h]
   \centering
   
 \includegraphics{./data/test_hist2.png}
-    \caption{Age distribution in the sample.}
-    \label{fig:age_dist}
+    \caption{Sex distribution in the sample with information on currently being unemployed interlayed.}
+    \label{histogram_plci}
   \end{figure}
 }
 
-{ \setkeys{Gin}{width=.7\paperwidth}
+
+  Finally, we adress the question of geographic distribution of the unemployed pollees. Figure \ref{map_average_unemployment}. Notice that the number of spells of unemployment was normalised to one in this figure. We notice that our sample seems reasonably representative when it comes to showing that the Lubuskie voievodship is a region of highened probability of being unemployed for a longer spell of periods. 
+  
+{ \setkeys{Gin}{width=.7\textwidth}
   \begin{figure}[h]
   \centering
   
 \includegraphics{./data/test_heatmap.png}
-    \caption{Age distribution in the sample.}
-    \label{fig:age_dist}
+    \caption{Geographic distribution of average number of unemployment.}
+    \label{map_average_unemployment}
   \end{figure}
 }

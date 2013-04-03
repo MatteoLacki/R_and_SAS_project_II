@@ -64,8 +64,8 @@ source("./scripts_R/visualization_scheme.R")
         \SweaveInput{tex_Rnw/on_the_sex_data.Rnw}
     \newpage
   
-  \section{Modelling}
-    \SweaveInput{tex_Rnw/poisson_modelling.Rnw}
-    \newpage
+  %\section{Modelling}
+    %\SweaveInput{tex_Rnw/poisson_modelling.Rnw}
+    %\newpage
     
 \end{document}
