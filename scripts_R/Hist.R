@@ -1,4 +1,4 @@
-Histogram_z_wypełnieniem <- function( Zmienna_na_histogram, Zmienna_wypelniajaca ,Data )
+Histogram_z_wypelnieniem <- function( Zmienna_na_histogram, Zmienna_wypelniajaca ,Data )
 {
   return(
     qplot(	Zmienna_na_histogram, 
@@ -11,4 +11,4 @@ Histogram_z_wypełnieniem <- function( Zmienna_na_histogram, Zmienna_wypelniajac
   )
 }
 
-#print(Histogram_z_wypełnieniem(Data$Age, Data$Is_Unemployed, Data))
+#print(Histogram_z_wypelnieniem(Data$Age, Data$Is_Unemployed, Data))

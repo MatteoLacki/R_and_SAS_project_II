@@ -1,5 +1,5 @@
-  Having omited all the pollees about whom we didn't know something, we have obtained a data frame consisting of \Sexpr{nrow(Data)} observations. In this paragraph we describe relations between spells of unemployment and age.
-First of all we decided to generate smoothed histogram of Age. We can observe that in our sample dominate people at working age, what provides that further analysis will make sense.    
+  Having omited all the pollees about whom we didn't know something, we have obtained a data frame consisting of \Sexpr{nrow(Data)} observations. In this paragraph we present 4 charts, which shows some aspects of unemployment.\\
+First of all we decided to generate smoothed histogram of Age - \ref{fig:age_dist}. We can observe that our sample is outbalanced by people at working age, what provides that further analysis will make sense.    
 { \setkeys{Gin}{width=.7\paperwidth}
   \begin{figure}[h]
   \centering
@@ -9,6 +9,50 @@ First of all we decided to generate smoothed histogram of Age. We can observe th
   plot(density(Data$Age,na.rm=TRUE),main="Density plot of Age")
   par <-oldpar
 @
+    \caption{Age distribution in the sample.}
+    \label{fig:age_dist}
+  \end{figure}
+}
+
+<<echo=FALSE,results=hide>>=
+visualsation_scheme(Data,"test_")
+@
+
+{ \setkeys{Gin}{width=.7\paperwidth}
+  \begin{figure}[h]
+  \centering
+  
+\includegraphics{./Data/test_pie1.png}
+    \caption{Age distribution in the sample.}
+    \label{fig:age_dist}
+  \end{figure}
+}
+
+{ \setkeys{Gin}{width=.7\paperwidth}
+  \begin{figure}[h]
+  \centering
+  
+\includegraphics{./Data/test_hist.png}
+    \caption{Age distribution in the sample.}
+    \label{fig:age_dist}
+  \end{figure}
+}
+
+{ \setkeys{Gin}{width=.7\paperwidth}
+  \begin{figure}[h]
+  \centering
+  
+\includegraphics{./Data/test_hist2.png}
+    \caption{Age distribution in the sample.}
+    \label{fig:age_dist}
+  \end{figure}
+}
+
+{ \setkeys{Gin}{width=.7\paperwidth}
+  \begin{figure}[h]
+  \centering
+  
+\includegraphics{./Data/test_heatmap.png}
     \caption{Age distribution in the sample.}
     \label{fig:age_dist}
   \end{figure}

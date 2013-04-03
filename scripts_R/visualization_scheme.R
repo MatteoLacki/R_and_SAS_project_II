@@ -13,11 +13,11 @@ pie3D(table(Set$Unemployment_Frequency),labels=lbls_sex,theta=1,labelcex=0.8,sta
 dev.off()
 
 png(file=paste("./data/",pref,"hist.png",sep=""))
-print(Histogram_z_wypełnieniem(Set$Age, Set$Is_Unemployed, Set))
+print(Histogram_z_wypelnieniem(Set$Age, Set$Is_Unemployed, Set))
 dev.off()
 
 png(file=paste("./data/",pref,"hist2.png",sep=""))
-print(Histogram_z_wypełnieniem(Set$Sex, Set$Is_Unemployed, Set))
+print(Histogram_z_wypelnieniem(Set$Sex, Set$Is_Unemployed, Set))
 dev.off()
 return (0)
   
