@@ -2,23 +2,18 @@ visualsation_scheme <- function(Set,pref){
 
   
 png(file=paste("./data/",pref,"heatmap.png",sep=""))
-Poland_Heatmap(Set,as.numeric(Set$Is_Unemployed)-1,"Average frequency of unemployment",3,4)
+Poland_Heatmap(Set,Set$Unemployment_Spells,"Average unemployment duration in months",4,1)
 dev.off()
 
 png(file=paste("./data/",pref,"pie1.png",sep=""))
-slices_sex <- c(table(Set$Sex))
-lbls_sex <- paste(levels(Set$Sex),"\n",slices_sex,sep="")
-pie3D(table(Set$Sex),labels=lbls_sex,theta=0.6,labelcex=1,start=0.5,col=c("blue","green"),explode=0.1,main=" 3D Pie Chart of Sex ")
-dev.off()
-
-slices_eng <- c(table(Set$Speaks_English))
-lbls_eng <- paste(levels(Set$Speaks_English),"\n",slices_eng,sep="")
-png(file=paste("./data/",pref,"pie2.png",sep=""))
-pie3D(slices_eng,labels=lbls_eng,theta=0.6,labelcex=1,start=0.5,col=c("blue","green","white"),explode=0.1,main=" 3D Pie Chart of Knowlage of English ")
+slices_sex <- c(table(Set$Unemployment_Frequency))
+lbls_sex <- paste(c("Never","x1","x2","x3"),"\n",slices_sex,sep="")
+pie3D(table(Set$Unemployment_Frequency),labels=lbls_sex,theta=1,labelcex=0.8,start=5
+      ,col=c("blue","green","pink","white"),explode=0.3,main=" 3D Pie Chart of Number of Times on Unemployment")
 dev.off()
 
 png(file=paste("./data/",pref,"hist.png",sep=""))
-print(Histogram_z_wypełnieniem(Set$Speaks_English, Set$Is_Unemployed, Set))
+print(Histogram_z_wypełnieniem(Set$Age, Set$Is_Unemployed, Set))
 dev.off()
 
 return (0)

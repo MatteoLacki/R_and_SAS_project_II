@@ -11,3 +11,4 @@ Histogram_z_wypełnieniem <- function( Zmienna_na_histogram, Zmienna_wypelniajac
   )
 }
 
+#print(Histogram_z_wypełnieniem(Data$Age, Data$Is_Unemployed, Data))

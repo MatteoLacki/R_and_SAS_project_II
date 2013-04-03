@@ -38,6 +38,6 @@ Poland_Heatmap <- function(Set,variable,title,num_breaks,prec=0) {
 
 #Poland_Heatmap(Data$Unemployment_Frequency,"Average frequency of unemployment",4,2)
 
-#Poland_Heatmap(Data$Unemployment_Spells,"Average unemployment duration in months",4,1)
+#Poland_Heatmap(Data,Data$Unemployment_Spells,"Average unemployment duration in months",4,1)
 
 #mode(Poland_Heatmap(Data,as.numeric(Data$Is_Unemployed)-1,"Average frequency of unemployment",3,4))
