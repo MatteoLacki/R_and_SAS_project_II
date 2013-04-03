@@ -1,4 +1,4 @@
-The project is based on the data, which was gathered during national survey \emph{Diagnoza Społeczna 2011}.  In this paper only the part of the survey referring to the individual questionnaire was used - the second part refers to households as a whole. The data was downloaded from the internet webpage \url{http://tofesi.mimuw.edu.pl/~cogito/smarterpoland/Diagnoza2011/}  .
+The project is based on the data, which was gathered during national survey \emph{Diagnoza Spo\l eczna 2011}.  In this paper only the part of the survey referring to the individual questionnaire was used - the second part refers to households as a whole. The data was downloaded from the internet webpage \url{http://tofesi.mimuw.edu.pl/~cogito/smarterpoland/Diagnoza2011/}  .
 
 The main idea of the project is to concentrate on the unemployment in Poland from the perspective of region, age, sex, education, disability and income. In the Table \ref{Tab:MissingValues} were described variables, which were chosen to the further analysis.
 

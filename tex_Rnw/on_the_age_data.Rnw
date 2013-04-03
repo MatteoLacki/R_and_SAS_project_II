@@ -1,6 +1,7 @@
   Having omited all the pollees about whom we didn't know something, we have obtained a data frame consisting of \Sexpr{nrow(Data)} observations. In this paragraph we present 4 charts, which shows some aspects of unemployment.\\
-First of all we decided to generate smoothed histogram of Age - \ref{fig:age_dist}. We can observe that our sample is outbalanced by people at working age, what provides that further analysis will make sense.    
-{ \setkeys{Gin}{width=.7\paperwidth}
+First of all we decided to generate smoothed histogram of Age - \ref{fig:age_dist}. 
+
+{ \setkeys{Gin}{width=\textwidth}
   \begin{figure}[h]
   \centering
   
@@ -14,27 +15,39 @@ First of all we decided to generate smoothed histogram of Age - \ref{fig:age_dis
   \end{figure}
 }
 
+We can observe that our sample is outbalanced by people at working age, what provides that further analysis will make sense.    
+
+
 <<echo=FALSE,results=hide>>=
 visualsation_scheme(Data,"test_")
 @
 
-{ \setkeys{Gin}{width=.7\paperwidth}
+
+
+So we pass to the main point of attention - the number of spells on unemployment. The distribution details of the number of spells of unemployment among the pollees is gathered in Figure \ref{fig:spells_of_unemployment}. 
+
+{ \setkeys{Gin}{width=.7\textwidth}
   \begin{figure}[h]
   \centering
   
 \includegraphics{./data/test_pie1.png}
-    \caption{Age distribution in the sample.}
-    \label{fig:age_dist}
+    \caption{Unconditioned (all levels of education included) distribution of the Spells on Unemployment.}
+    \label{fig:spells_of_unemployment}
   \end{figure}
 }
+
+Notice that the overwhelming majority of the pollees did not end up enemployed in the last five years. 
+
+
+Next, we pass to the study of the distribution of age in our sample. Observe that in Figure \ref{histogram_wieku} we can observe that no clear pattern emerges when it comes to at what age we are more prone to get unempoyed. On the other hand, this figure rassebles only the information about being unemployed at the moment of conducting the polls.
 
 { \setkeys{Gin}{width=.7\paperwidth}
   \begin{figure}[h]
   \centering
   
 \includegraphics{./data/test_hist.png}
-    \caption{Age distribution in the sample.}
-    \label{fig:age_dist}
+    \caption{Age distribution in the sample with information on currently being unemployed interlayed.}
+    \label{histogram_wieku}
   \end{figure}
 }
 
