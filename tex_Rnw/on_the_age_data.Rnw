@@ -22,7 +22,7 @@ visualsation_scheme(Data,"test_")
   \begin{figure}[h]
   \centering
   
-\includegraphics{./Data/test_pie1.png}
+\includegraphics{./data/test_pie1.png}
     \caption{Age distribution in the sample.}
     \label{fig:age_dist}
   \end{figure}

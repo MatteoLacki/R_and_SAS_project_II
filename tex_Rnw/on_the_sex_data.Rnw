@@ -1,0 +1,5 @@
+<To WRITE>
+
+<<echo=FALSE,results=hide>>=
+cond_visualization_scheme(Data,Data$Education,c("Never","x1","x2"))
+@

@@ -1,4 +1,4 @@
-visualsation_scheme <- function(Set,pref){ 
+visualsation_scheme <- function(Set,pref,leg=c("Never","x1","x2","x3")){ 
 
   
 png(file=paste("./data/",pref,"heatmap.png",sep=""))
@@ -7,7 +7,7 @@ dev.off()
 
 png(file=paste("./data/",pref,"pie1.png",sep=""))
 slices_sex <- c(table(Set$Unemployment_Frequency))
-lbls_sex <- paste(c("Never","x1","x2","x3"),"\n",slices_sex,sep="")
+lbls_sex <- paste(leg,"\n",slices_sex,sep="")
 pie3D(table(Set$Unemployment_Frequency),labels=lbls_sex,theta=1,labelcex=0.8,start=5
       ,col=c("blue","green","pink","white"),explode=0.3,main=" 3D Pie Chart of Number of Times on Unemployment")
 dev.off()
@@ -26,11 +26,11 @@ return (0)
 
 #visualsation_scheme(Data,"test_")
 
-cond_visualization_scheme <- function(set,var){
+cond_visualization_scheme <- function(set,var,leg){
   levels_var <- levels(var)
 my_cut <-   function(x){ 
-    print(visualsation_scheme(set[(var==x) ,],x)) }
+    print(visualsation_scheme(set[(var==x) ,],x,leg)) }
   vectors <- lapply(levels_var,my_cut)
 }
 
-#cond_visualization_scheme(Data,Data$Education)
+#cond_visualization_scheme(Data,Data$Education,c("Never","x1","x2"))
